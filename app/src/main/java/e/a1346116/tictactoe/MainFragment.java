@@ -42,13 +42,11 @@ public class MainFragment extends Fragment {
                 if(m_ticTacToe.verifierGagner()) {
                     for(Button btn : m_tableau) {
                         btn.setEnabled(false);
-                        Toast.makeText(getActivity(),"Partie Gagnée par : " + m_ticTacToe.getJoueurCourant(),Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getActivity(),getString(R.string.ToastGagner) + m_ticTacToe.getJoueurCourant(),Toast.LENGTH_SHORT).show();
                     }
                 }
                 if(m_ticTacToe.partieNulle()) {
-                    for(Button btn : m_tableau) {
-                        Toast.makeText(getActivity(),"Partie nulle", Toast.LENGTH_SHORT).show();
-                    }
+                    Toast.makeText(getActivity(),getString(R.string.ToastNulle), Toast.LENGTH_SHORT).show();
                 }
                 textViewJoueurSuivant.setText(m_ticTacToe.getJoueurCourant());
             }
@@ -121,6 +119,7 @@ public class MainFragment extends Fragment {
                     btn.setText("");
                     btn.setEnabled(true);
                 }
+                textViewJoueurSuivant.setText(m_ticTacToe.getJoueurCourant());
             }
         });
         return v;

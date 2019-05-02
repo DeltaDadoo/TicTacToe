@@ -2,4 +2,6 @@
     <string name="app_name">TicTacToe</string>
     <string name="Reset">Reset</string>
     <string name="JoueurCourant">Joueur Courant</string>
+    <string name="ToastGagner">Partie Gagnée par :&#160;</string>
+    <string name="ToastNulle">Partie nulle :&#160;</string>
 </resources>
