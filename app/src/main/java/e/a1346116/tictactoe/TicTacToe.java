@@ -23,43 +23,70 @@ public class TicTacToe {
 
     public void jouerCoup(int p_index) {
         m_tableau[p_index] = m_joueurCourant;
+        changerJoueurCourant();
     }
 
     public boolean verifierGagner() {
         if(m_tableau[0] == m_tableau[1] && m_tableau[0] == m_tableau[2]) {
+            changerJoueurCourant();
             return true;
         }
 
         if(m_tableau[0] == m_tableau[3] && m_tableau[0] == m_tableau[6]) {
+            changerJoueurCourant();
             return true;
         }
 
         if(m_tableau[0] == m_tableau[4] && m_tableau[0] == m_tableau[8]) {
+            changerJoueurCourant();
             return true;
         }
 
         if(m_tableau[8] == m_tableau[7] && m_tableau[8] == m_tableau[6]) {
+            changerJoueurCourant();
             return true;
         }
 
         if(m_tableau[8] == m_tableau[5] && m_tableau[8] == m_tableau[2]) {
+            changerJoueurCourant();
             return true;
         }
 
         if(m_tableau[1] == m_tableau[4] && m_tableau[1] == m_tableau[7]) {
+            changerJoueurCourant();
             return true;
         }
 
         if(m_tableau[3] == m_tableau[4] && m_tableau[3] == m_tableau[5]) {
+            changerJoueurCourant();
             return true;
         }
 
         if(m_tableau[6] == m_tableau[4] && m_tableau[6] == m_tableau[2]) {
+            changerJoueurCourant();
             return true;
         }
 
-        changerJoueurCourant();
         return false;
+    }
+
+    public boolean partieNulle() {
+        if (!verifierGagner() && tableauRemplit()) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
+    private boolean tableauRemplit() {
+        for (String s : m_tableau) {
+            if (!s.equals("X") && !s.equals("O")) {
+                return false;
+            }
+        }
+
+        return true;
     }
 
     private void changerJoueurCourant() {

@@ -39,6 +39,7 @@ public class MainFragment extends Fragment {
                 temporaire.setText(m_ticTacToe.getJoueurCourant());
                 int index = m_tableau.indexOf(temporaire);
                 m_ticTacToe.jouerCoup(index);
+                temporaire.setEnabled(false);
                 if(m_ticTacToe.verifierGagner()) {
                     for(Button btn : m_tableau) {
                         btn.setEnabled(false);
