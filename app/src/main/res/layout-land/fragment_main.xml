@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="125dp"
+            android:layout_marginStart="30dp"
+            android:text="@string/Reset"
+            android:id="@+id/btnReset"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="45dp"
+            android:layout_marginStart="20dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rangée1"
+                android:orientation="horizontal">
+
+                <Button
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:id="@+id/btn_1"/>
+                <Button
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:id="@+id/btn_2"/>
+                <Button
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:id="@+id/btn_3"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/rangée2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_4"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp" />
+
+                <Button
+                    android:id="@+id/btn_5"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp" />
+
+                <Button
+                    android:id="@+id/btn_6"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rangée3"
+                android:orientation="horizontal">
+
+                <Button
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:id="@+id/btn_7"/>
+                <Button
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:id="@+id/btn_8"/>
+                <Button
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:id="@+id/btn_9"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="75sp"
+            android:textSize="20sp"
+            android:textAlignment="center"
+            android:text="@string/JoueurCourant"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="75sp"
+            android:textAlignment="center"
+            android:id="@+id/joueurCourant"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

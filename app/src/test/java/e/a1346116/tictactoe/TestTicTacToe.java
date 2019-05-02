@@ -16,7 +16,7 @@ public class TestTicTacToe extends TestCase {
     }
 
     public void testXGagnant() {
-        TicTacToe.obtenirInstance().Reset();
+        TicTacToe.obtenirInstance().reset();
         TicTacToe.obtenirInstance().jouerCoup(0);
         assertFalse(TicTacToe.obtenirInstance().verifierGagner());
         TicTacToe.obtenirInstance().jouerCoup(1);
@@ -29,7 +29,7 @@ public class TestTicTacToe extends TestCase {
 
         TicTacToe.obtenirInstance().jouerCoup(6);
         assertTrue(TicTacToe.obtenirInstance().verifierGagner());
-        TicTacToe.obtenirInstance().Reset();
+        TicTacToe.obtenirInstance().reset();
 
 
         TicTacToe.obtenirInstance().jouerCoup(0);
@@ -44,7 +44,7 @@ public class TestTicTacToe extends TestCase {
 
         TicTacToe.obtenirInstance().jouerCoup(2);
         assertTrue(TicTacToe.obtenirInstance().verifierGagner());
-        TicTacToe.obtenirInstance().Reset();
+        TicTacToe.obtenirInstance().reset();
 
 
         TicTacToe.obtenirInstance().jouerCoup(8);
@@ -59,7 +59,7 @@ public class TestTicTacToe extends TestCase {
 
         TicTacToe.obtenirInstance().jouerCoup(2);
         assertTrue(TicTacToe.obtenirInstance().verifierGagner());
-        TicTacToe.obtenirInstance().Reset();
+        TicTacToe.obtenirInstance().reset();
 
 
         TicTacToe.obtenirInstance().jouerCoup(3);
@@ -74,11 +74,11 @@ public class TestTicTacToe extends TestCase {
 
         TicTacToe.obtenirInstance().jouerCoup(5);
         assertTrue(TicTacToe.obtenirInstance().verifierGagner());
-        TicTacToe.obtenirInstance().Reset();
+        TicTacToe.obtenirInstance().reset();
     }
 
     public void test0Gagnant() {
-        TicTacToe.obtenirInstance().Reset();
+        TicTacToe.obtenirInstance().reset();
         TicTacToe.obtenirInstance().jouerCoup(2);
         assertFalse(TicTacToe.obtenirInstance().verifierGagner());
         TicTacToe.obtenirInstance().jouerCoup(0);
@@ -93,7 +93,7 @@ public class TestTicTacToe extends TestCase {
         assertFalse(TicTacToe.obtenirInstance().verifierGagner());
         TicTacToe.obtenirInstance().jouerCoup(8);
         assertTrue(TicTacToe.obtenirInstance().verifierGagner());
-        TicTacToe.obtenirInstance().Reset();
+        TicTacToe.obtenirInstance().reset();
 
 
         TicTacToe.obtenirInstance().jouerCoup(1);
@@ -110,7 +110,7 @@ public class TestTicTacToe extends TestCase {
         assertFalse(TicTacToe.obtenirInstance().verifierGagner());
         TicTacToe.obtenirInstance().jouerCoup(6);
         assertTrue(TicTacToe.obtenirInstance().verifierGagner());
-        TicTacToe.obtenirInstance().Reset();
+        TicTacToe.obtenirInstance().reset();
 
 
         TicTacToe.obtenirInstance().jouerCoup(2);
@@ -127,7 +127,7 @@ public class TestTicTacToe extends TestCase {
         assertFalse(TicTacToe.obtenirInstance().verifierGagner());
         TicTacToe.obtenirInstance().jouerCoup(7);
         assertTrue(TicTacToe.obtenirInstance().verifierGagner());
-        TicTacToe.obtenirInstance().Reset();
+        TicTacToe.obtenirInstance().reset();
 
 
         TicTacToe.obtenirInstance().jouerCoup(8);
@@ -144,11 +144,11 @@ public class TestTicTacToe extends TestCase {
         assertFalse(TicTacToe.obtenirInstance().verifierGagner());
         TicTacToe.obtenirInstance().jouerCoup(2);
         assertTrue(TicTacToe.obtenirInstance().verifierGagner());
-        TicTacToe.obtenirInstance().Reset();
+        TicTacToe.obtenirInstance().reset();
     }
 
     public void testPartieNulle() {
-        TicTacToe.obtenirInstance().Reset();
+        TicTacToe.obtenirInstance().reset();
         TicTacToe.obtenirInstance().jouerCoup(1);
         assertFalse(TicTacToe.obtenirInstance().verifierGagner());
 

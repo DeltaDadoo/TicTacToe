@@ -14,7 +14,6 @@ import android.widget.Toast;
 import java.util.ArrayList;
 
 public class MainFragment extends Fragment {
-
     private TextView textViewJoueurSuivant;
     private TicTacToe m_ticTacToe = TicTacToe.obtenirInstance();
     private ArrayList<Button> m_tableau = new ArrayList<>();
@@ -46,6 +45,11 @@ public class MainFragment extends Fragment {
                         Toast.makeText(getActivity(),"Partie Gagnée par : " + m_ticTacToe.getJoueurCourant(),Toast.LENGTH_SHORT).show();
                     }
                 }
+                if(m_ticTacToe.partieNulle()) {
+                    for(Button btn : m_tableau) {
+                        Toast.makeText(getActivity(),"Partie nulle", Toast.LENGTH_SHORT).show();
+                    }
+                }
                 textViewJoueurSuivant.setText(m_ticTacToe.getJoueurCourant());
             }
         };
@@ -61,7 +65,7 @@ public class MainFragment extends Fragment {
         View v = inflater.inflate(R.layout.fragment_main, container, false);
 
         textViewJoueurSuivant = v.findViewById(R.id.joueurCourant);
-        textViewJoueurSuivant.setText("X");
+        textViewJoueurSuivant.setText(m_ticTacToe.getJoueurCourant());
 
         m_btn0 = v.findViewById(R.id.btn_1);
         m_btn0.setOnClickListener(nouveauListener);
@@ -99,12 +103,20 @@ public class MainFragment extends Fragment {
         m_btn8.setOnClickListener(nouveauListener);
         m_tableau.add(m_btn8);
 
+        String[] repBtn = m_ticTacToe.recupererText();
+        for(int i = 0; i < 9; i++) {
+            Button btn = m_tableau.get(i);
+            btn.setText(repBtn[i]);
+            if (btn.getText() != " ") {
+                btn.setEnabled(false);
+            }
+        }
 
         m_btnReset = v.findViewById(R.id.btnReset);
         m_btnReset.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                m_ticTacToe.Reset();
+                m_ticTacToe.reset();
                 for (Button btn : m_tableau) {
                     btn.setText("");
                     btn.setEnabled(true);

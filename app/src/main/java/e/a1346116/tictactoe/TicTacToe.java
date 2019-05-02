@@ -7,7 +7,7 @@ public class TicTacToe {
     private String[] m_tableau;
 
     public TicTacToe() {
-        Reset();
+        reset();
     }
 
     public static TicTacToe obtenirInstance() {
@@ -17,8 +17,23 @@ public class TicTacToe {
         return m_singleton;
     }
 
-    public void Reset() {
+    public void reset() {
         m_tableau = new String[]{"0", "1", "2", "3", "4", "5", "6", "7", "8"};
+    }
+
+    public String[] recupererText() {
+        String[] array = new String[9];
+        String repCourant;
+        for (int i = 0; i < 9 ; i++) {
+            repCourant = m_tableau[i];
+            if (repCourant.equals("X") || repCourant.equals("O")) {
+                array[i] = repCourant;
+            }
+            else {
+                array[i] = " ";
+            }
+        }
+        return array;
     }
 
     public void jouerCoup(int p_index) {
