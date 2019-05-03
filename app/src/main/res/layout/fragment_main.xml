@@ -92,14 +92,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
-            android:textSize="20dp"
+            android:textSize="20sp"
             android:textAlignment="center"
             android:text="@string/JoueurCourant"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="75dp"
+            android:textSize="75sp"
             android:textAlignment="center"
             android:id="@+id/joueurCourant"/>
     </LinearLayout>
