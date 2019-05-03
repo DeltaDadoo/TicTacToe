@@ -1,5 +1,6 @@
 package e.a1346116.tictactoe;
 
+import android.content.res.Resources;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
 
@@ -50,14 +51,14 @@ public class TicTacToeFragmentTest {
         onView(withId(R.id.btn_3)).check(matches(withText("X")));
         onView(withId(R.id.joueurCourant)).check(matches(withText("O")));
 
-        onView(withText(R.string.ToastGagner)).inRoot(withDecorView(not(is(m_activityRule.getActivity().getWindow().getDecorView())))).check(matches(isDisplayed()));
+        onView(withText(R.string.ToastGagnerTest)).inRoot(withDecorView(not(is(m_activityRule.getActivity().getWindow().getDecorView())))).check(matches(isDisplayed()));
 
         onView(withId(R.id.btnReset)).perform(click());
-        onView(withId(R.id.btn_1)).check(matches(withText(" ")));
-        onView(withId(R.id.btn_4)).check(matches(withText(" ")));
-        onView(withId(R.id.btn_2)).check(matches(withText(" ")));
-        onView(withId(R.id.btn_5)).check(matches(withText(" ")));
-        onView(withId(R.id.btn_3)).check(matches(withText(" ")));
+        onView(withId(R.id.btn_1)).check(matches(withText("")));
+        onView(withId(R.id.btn_4)).check(matches(withText("")));
+        onView(withId(R.id.btn_2)).check(matches(withText("")));
+        onView(withId(R.id.btn_5)).check(matches(withText("")));
+        onView(withId(R.id.btn_3)).check(matches(withText("")));
         onView(withId(R.id.joueurCourant)).check(matches(withText("X")));
 
         onView(withId(R.id.btn_2)).perform(click());
