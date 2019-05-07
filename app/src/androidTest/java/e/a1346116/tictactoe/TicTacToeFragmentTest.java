@@ -19,6 +19,9 @@ import static org.hamcrest.Matchers.not;
 
 /**
  * Classe qui test l'interface graphique android du jeu
+ *
+ * @author David Goulet
+ * @author Olivier Chan
  */
 @RunWith(AndroidJUnit4.class)
 public class TicTacToeFragmentTest {

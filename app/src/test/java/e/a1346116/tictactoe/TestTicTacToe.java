@@ -4,6 +4,9 @@ import junit.framework.TestCase;
 
 /**
  * Classe qui test le fonctionnement logique du jeu
+ *
+ * @author David Goulet
+ * @author Olivier Chan
  */
 public class TestTicTacToe extends TestCase {
 
